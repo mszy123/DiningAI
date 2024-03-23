@@ -1,0 +1,9 @@
+#menu-items {
+    list-style: none;
+    padding: 0;
+}
+#menu-items li {
+    margin-bottom: 5px;
+    padding: 5px;
+    border: 1px solid #ddd;
+}
