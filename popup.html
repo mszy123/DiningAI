@@ -2,9 +2,33 @@
 <html>
 <head>
     <title>Menu Fetcher</title>
+    <!-- Link to the stylesheet -->
+    <link rel="stylesheet" href="popup.css">
 </head>
 <body>
     <h1>Fetch Menu</h1>
+
+    <!-- Dietary Restrictions Section -->
+    <div id="dietaryRestrictions">
+        <h2>Select Your Dietary Restriction:</h2>
+
+        <input type="radio" id="none" name="diet" value="None" checked>
+        <label for="none">None</label><br>
+
+        <input type="radio" id="vegan" name="diet" value="Vegan">
+        <label for="vegan">Vegan</label><br>
+
+        <input type="radio" id="vegetarian" name="diet" value="Vegetarian">
+        <label for="vegetarian">Vegetarian</label><br>
+
+        <input type="radio" id="glutenFree" name="diet" value="Gluten-Free">
+        <label for="glutenFree">Gluten-Free</label><br>
+
+        <input type="radio" id="peanutAllergy" name="diet" value="Gluten-Free">
+        <label for="peanutAllergy">Peanut Allergy</label><br>
+
+    </div>
+
     <button id="fetchMenuButton">Fetch Menu</button>
     <div id="menu"></div>
     <script src="popup.js"></script>
