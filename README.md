@@ -28,7 +28,7 @@ I began with designing the popup for the extension and simply scraping and print
 The first difficulty I encountered is that the different javascript files I had needed to "talk" to one another so the extension knew when to inject the content script which led to me discovering the Chrome messaging API and storage API which allowed me to send messages across files to trigger events. Another difficulty is Chrome has a content security policy that does not allow me to call any remote code in my extension, leading me to create a proxy server in Heroku to manage calls to the ChatGPT API. The third difficulty is getting ChatGPT to always output the same format so my program can parse it and display the recipes to the user, leading me to fine-tune a ChatGPT model to output it in a JSON format and convert it, along with some prompt engineering. 
 
 ### Go-to-Market Strategy
-This extension is readily scalable due to the scalable Heroku flask server the ChatGPT API is implemented on. It also adheres to all Chrome Extension policies such as it's CSP allowing it to be published on the Chrome Web Store. The API keys used are also securely stored in a .env file on the proxy server. 
+This extension is readily scalable due to the scalable Heroku flask server the ChatGPT API is implemented on. It also adheres to all Chrome Extension policies such as it's CSP allowing it to be published on the Chrome Web Store. The API keys used are also securely stored in a .env file on the proxy server. This also works on any Dine On Campus site, meaning it is scalable to other colleges and universities that have Dine On Campus access
 
 
 
