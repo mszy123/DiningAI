@@ -1,29 +1,134 @@
-
 body{
-    height: 400px;
-    width: 200px;
+    padding: 0px;
+    margin: 0px;
 }
+
+h1{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+h3{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+hr {
+    border: 1 solid black;
+    height: 1px;
+    width: 280px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.body-section {
+    display: flex;
+    flex-direction: column;
+    max-height: 400px;
+    width: 300px;
+    padding: 10px;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
 #menu-items {
     list-style: none;
     padding: 0;
 }
+
 #menu-items li {
     margin-bottom: 5px;
     padding: 5px;
     border: 1px solid #ddd;
 }
 
-.savedRecipe{
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+#header{
+    height: 15px;
+    width: 100%;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+    padding: none;
+}
+
+.savedRecipe {
     padding: 10px;
-    border: solid 1px gray;
+    border: solid 1px #c7c7c7;
     border-radius: 12px;
 }
 
-.savedRecipe h3{
+.savedRecipe h3 {
     margin-top: 0px;
     margin-bottom: 0px;
+    color: #464646;
 }
 
-.savedRecipe p{
+.savedRecipe p {
     margin-top: 5px;
+}
+
+.showBtn {
+    padding: 6px;
+    border: solid 1px #c7c7c7;
+    font-size: 12px;
+    border-radius: 24px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 0px;
+    margin-top: 5px;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    
+    background-color: transparent;
+
+
+}
+
+.showBtn:hover{
+    background-color: #dbdbdb;
+}
+
+#fetchMenuButton {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: #f0f0f0;
+    font-weight: 500;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #25323f;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+#fetchMenuButton:hover{
+    background: #c7c7c7;
+}
+
+
+
+#title {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    
+    /* Apply the gradient background to the text */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Fallback for browsers that don't support background-clip */
+    
+    /* Additional styles to make the text look better */
+    font-size: 2em;
+    font-weight: bold;
 }

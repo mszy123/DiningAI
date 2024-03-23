@@ -1,4 +1,11 @@
 // content.js
+
+// Create a link element for the Material Icons stylesheet
+var link = document.createElement('link');
+link.href = 'https://fonts.googleapis.com/icon?family=Material+Icons';
+link.rel = 'stylesheet';
+document.head.appendChild(link);
+
 chrome.runtime.onMessage.addListener(
   function (request, sender, sendResponse) {
     if (request.action === "fetchMenu") {
@@ -68,7 +75,7 @@ async function displayRecipesOnPage(recipesObj) {
     recipeName.textContent = recipe.name;
     recipeDiv.appendChild(recipeName);
 
-    
+
     // Add the ingredients list
     const ingredientsList = document.createElement('ul');
     recipe.ingredients.forEach((ingredient) => {
@@ -77,29 +84,39 @@ async function displayRecipesOnPage(recipesObj) {
       ingredientsList.appendChild(item);
     });
     recipeDiv.appendChild(ingredientsList);
-    
+
     // Add the instructions
     const instructions = document.createElement('p');
     instructions.textContent = `Instructions: ${recipe.instructions}`;
     instructions.style.marginBottom = '5px';
     recipeDiv.appendChild(instructions);
-    
-    // Create a Save button for each recipe
-    const saveButton = document.createElement('button');
-    saveButton.textContent = 'Save';
-    saveButton.style = 'margin-left: 10px;'; // Add styling as needed
-  
+
+    // Create a Material Icon star for saving the recipe
+    const saveIcon = document.createElement('span');
+    saveIcon.classList.add('material-icons');
+    saveIcon.textContent = 'star_border'; // Use 'star_border' for not saved, 'star' for saved
+    saveIcon.style.cursor = 'pointer';
+    saveIcon.setAttribute('title', 'Save Recipe');
+
     // Add an event listener to the Save button
-    saveButton.addEventListener('click', function () {
-      const recipeData = { recipe: recipe, key: `recipe_${index}` };
-      // Send the recipe data to the background script
-      chrome.runtime.sendMessage({ action: "saveRecipe", data: recipeData }, function (response) {
+    saveIcon.addEventListener('click', function () {
+      // Determine the current state based on the icon
+      const isSaved = saveIcon.textContent === 'star';
+
+      // Toggle the icon based on whether the recipe is currently saved
+      saveIcon.textContent = isSaved ? 'star_border' : 'star';
+
+      // Define the recipe data to send
+      const recipeData = { recipe: recipe, key: `recipe_${index}` }; // Ensure 'index' is defined in your loop or context
+
+      // Send the recipe data to the background script, toggling saved state
+      chrome.runtime.sendMessage({ action: isSaved ? "removeRecipe" : "saveRecipe", data: recipeData }, function (response) {
         console.log('Response received from background:', response);
       });
     });
-  
-    // Append the Save button to the recipe div
-    recipeDiv.appendChild(saveButton);
+
+    // Append the Save icon to the recipe div
+    recipeDiv.appendChild(saveIcon);
 
     // Append each recipe div to the recipes container
     recipesContainer.appendChild(recipeDiv);

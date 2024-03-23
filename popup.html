@@ -4,33 +4,44 @@
     <title>Menu Fetcher</title>
     <!-- Link to the stylesheet -->
     <link rel="stylesheet" href="popup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 <body>
-    <h1>Fetch Menu</h1>
+    <div id="header"></div>
+    <div class="body-section">
 
-    <!-- Dietary Restrictions Section -->
-    <div id="dietaryRestrictions">
-        <h2>Select Your Dietary Restriction:</h2>
-
-        <input type="radio" id="none" name="diet" value="None" checked>
-        <label for="none">None</label><br>
-
-        <input type="radio" id="vegan" name="diet" value="Vegan">
-        <label for="vegan">Vegan</label><br>
-
-        <input type="radio" id="vegetarian" name="diet" value="Vegetarian">
-        <label for="vegetarian">Vegetarian</label><br>
-
-        <input type="radio" id="glutenFree" name="diet" value="Gluten-Free">
-        <label for="glutenFree">Gluten-Free</label><br>
-
-        <input type="radio" id="peanutAllergy" name="diet" value="Gluten-Free">
-        <label for="peanutAllergy">Peanut Allergy</label><br>
-
+        <h1 id="title">Dining Hall AI</h1>
+    
+        <!-- Dietary Restrictions Section -->
+        <div id="dietaryRestrictions">
+            <h3>Select Your Dietary Restriction:</h3>
+    
+            <input type="radio" id="none" name="diet" value="None" checked>
+            <label for="none">None</label><br>
+    
+            <input type="radio" id="vegan" name="diet" value="Vegan">
+            <label for="vegan">Vegan</label><br>
+    
+            <input type="radio" id="vegetarian" name="diet" value="Vegetarian">
+            <label for="vegetarian">Vegetarian</label><br>
+    
+            <input type="radio" id="glutenFree" name="diet" value="Gluten-Free">
+            <label for="glutenFree">Gluten-Free</label><br>
+    
+            <input type="radio" id="peanutAllergy" name="diet" value="Gluten-Free">
+            <label for="peanutAllergy">Peanut Allergy</label><br>
+    
+        </div>
+    
+        <button id="fetchMenuButton">Generate Recipes</button>
+        <hr>
+        <h3>Saved Recipes:</h3>
+        <div id="menu"></div>
     </div>
-
-    <button id="fetchMenuButton">Fetch Menu</button>
-    <div id="menu"></div>
     <script src="popup.js"></script>
 </body>
 </html>
