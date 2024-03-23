@@ -3,7 +3,7 @@
     "name": "Campus Menu Scraper",
     "version": "1.0",
     "description": "Scrapes the dining menu from the Colgate University Campus Dining website.",
-    "permissions": ["activeTab"],
+    "permissions": ["activeTab", "storage"],
     "background": {
       "service_worker": "background.js"
     },

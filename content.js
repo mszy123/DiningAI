@@ -15,7 +15,7 @@ chrome.runtime.onMessage.addListener(
         console.error('Error fetching or displaying recipes:', error);
       });
 
-      sendResponse({ data: menuItems});
+      sendResponse({ data: menuItems });
     }
     // Return true if you will asynchronously send a response
     return true;
@@ -57,16 +57,18 @@ async function displayRecipesOnPage(recipesObj) {
   title.style.marginBottom = '10px';
   recipesContainer.appendChild(title);
 
-  recipesObj.recipes.forEach((recipe) => {
+  recipesObj.recipes.forEach((recipe, index) => {
     // Create a div for each recipe
     const recipeDiv = document.createElement('div');
     recipeDiv.style = 'margin-bottom: 20px; border: 1px solid gray; border-radius: 24px; padding: 15px;'; // Example styling, adjust as needed
+
 
     // Add the recipe name
     const recipeName = document.createElement('h2');
     recipeName.textContent = recipe.name;
     recipeDiv.appendChild(recipeName);
 
+    
     // Add the ingredients list
     const ingredientsList = document.createElement('ul');
     recipe.ingredients.forEach((ingredient) => {
@@ -75,12 +77,29 @@ async function displayRecipesOnPage(recipesObj) {
       ingredientsList.appendChild(item);
     });
     recipeDiv.appendChild(ingredientsList);
-
+    
     // Add the instructions
     const instructions = document.createElement('p');
     instructions.textContent = `Instructions: ${recipe.instructions}`;
     instructions.style.marginBottom = '5px';
     recipeDiv.appendChild(instructions);
+    
+    // Create a Save button for each recipe
+    const saveButton = document.createElement('button');
+    saveButton.textContent = 'Save';
+    saveButton.style = 'margin-left: 10px;'; // Add styling as needed
+  
+    // Add an event listener to the Save button
+    saveButton.addEventListener('click', function () {
+      const recipeData = { recipe: recipe, key: `recipe_${index}` };
+      // Send the recipe data to the background script
+      chrome.runtime.sendMessage({ action: "saveRecipe", data: recipeData }, function (response) {
+        console.log('Response received from background:', response);
+      });
+    });
+  
+    // Append the Save button to the recipe div
+    recipeDiv.appendChild(saveButton);
 
     // Append each recipe div to the recipes container
     recipesContainer.appendChild(recipeDiv);

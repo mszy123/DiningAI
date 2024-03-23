@@ -12,3 +12,18 @@ body{
     padding: 5px;
     border: 1px solid #ddd;
 }
+
+.savedRecipe{
+    padding: 10px;
+    border: solid 1px gray;
+    border-radius: 12px;
+}
+
+.savedRecipe h3{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.savedRecipe p{
+    margin-top: 5px;
+}
