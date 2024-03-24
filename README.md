@@ -32,6 +32,13 @@ The first difficulty I encountered is that the different javascript files I had 
 ### Go-to-Market Strategy
 This extension is readily scalable due to the scalable Heroku flask server the ChatGPT API is implemented on. It also adheres to all Chrome Extension policies such as it's CSP allowing it to be published on the Chrome Web Store. The API keys used are also securely stored in a .env file on the proxy server. This also works on any Dine On Campus site, meaning it is scalable to other colleges and universities that have Dine On Campus access
 
+### How To Install This Extension
+- Clone this github repo
+- Go to chrome://extensions/
+- Click 'Load Unpacked' in the top left corner
+- Select the folder of this repo (DiningAI)
+- Go to the extension bar in the Chrome tab and pin the extension, then click the DiningAI icon to use
+
 
 
 
