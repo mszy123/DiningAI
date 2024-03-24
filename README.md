@@ -40,9 +40,24 @@ This extension is readily scalable due to the scalable Heroku flask server the C
 - Go to the extension bar in the Chrome tab and pin the extension, then click the DiningAI icon to use
 
 ### Images
-![Screenshot](https://github.com/mszy123/DiningAI/blob/main/Screenshot%202024-03-24%20094657.png)
-![Screenshot](https://github.com/mszy123/DiningAI/blob/main/Screenshot%202024-03-24%20095234.png)
-![Logo](https://raw.githubusercontent.com/mszy123/DiningAI/main/logo%20(2).svg)
+<p align="center">
+  <img src="https://github.com/mszy123/DiningAI/blob/main/Screenshot%202024-03-24%20094657.png" alt="Screenshot" style="margin-bottom: 40px;"/>
+  <br>
+  <em>Figure 1: Extension popup.</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/mszy123/DiningAI/blob/main/Screenshot%202024-03-24%20095234.png" alt="Screenshot" style="margin-bottom: 40px;"/>
+  <br>
+  <em>Figure 2: Extension popup and injected content</em>
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/mszy123/DiningAI/main/logo%20(2).svg" alt="Logo" width="100" height="100" style="margin-bottom: 40px;"/>
+  <br>
+  <em>Figure 3: Logo.</em>
+</p>
+
 
 
 
