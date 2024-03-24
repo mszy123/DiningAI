@@ -5,6 +5,8 @@
 
 I'm Kerry Cassidy and major in Economics but am really interested in CS. I did some UI design for this extension
 
+### Link to Pitch & Demo Video: https://youtu.be/TxKR5SOE8AA
+
 ### Purpose & Motivation
 Everyone knows how sometimes there's not that much variety in the dining halls, or if you have any dietary restrictions it is hard to find creative and unique meals... That is where Dining AI helps! Dining AI uses the power of AI to generate unique meal options based on any dining restrictions and the current menu in the dining halls! No more wandering around the dining halls looking for something good to eat, make it yourself with the help of Dining AI. 
 
@@ -29,6 +31,39 @@ The first difficulty I encountered is that the different javascript files I had 
 
 ### Go-to-Market Strategy
 This extension is readily scalable due to the scalable Heroku flask server the ChatGPT API is implemented on. It also adheres to all Chrome Extension policies such as it's CSP allowing it to be published on the Chrome Web Store. The API keys used are also securely stored in a .env file on the proxy server. This also works on any Dine On Campus site, meaning it is scalable to other colleges and universities that have Dine On Campus access
+
+### How To Install This Extension
+- Clone this github repo
+- Go to chrome://extensions/
+- Click 'Load Unpacked' in the top left corner
+- Select the folder of this repo (DiningAI)
+- Go to the extension bar in the Chrome tab and pin the extension, then click the DiningAI icon to use
+
+### Images
+<p align="center">
+  <img src="https://github.com/mszy123/DiningAI/blob/main/Screenshot%202024-03-24%20094657.png" alt="Screenshot" style="margin-bottom: 80px;"/>
+  <br>
+  <em>Figure 1: Extension popup.</em>
+</p>
+
+  <br>
+  <br>
+
+<p align="center">
+  <img src="https://github.com/mszy123/DiningAI/blob/main/Screenshot%202024-03-24%20095234.png" alt="Screenshot" style="margin-bottom: 80px;"/>
+  <br>
+  <em>Figure 2: Extension popup and injected content</em>
+</p>
+  <br>
+  <br>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/mszy123/DiningAI/main/logo%20(2).svg" alt="Logo" width="100" height="100" style="margin-bottom: 80px;"/>
+  <br>
+  <em>Figure 3: Logo.</em>
+</p>
+
+
 
 
 
