@@ -15,6 +15,11 @@
     ],
     "action": {
       "default_popup": "popup.html"
+    },
+    "icons": {
+      "16": "assets/logo16.png",
+      "48": "assets/logo48.png",
+      "128": "assets/logo128.png"
     }
   }
   
