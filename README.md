@@ -5,6 +5,8 @@
 
 I'm Kerry Cassidy and major in Economics but am really interested in CS. I did some UI design for this extension
 
+### Link to Pitch & Demo Video: https://youtu.be/TxKR5SOE8AA
+
 ### Purpose & Motivation
 Everyone knows how sometimes there's not that much variety in the dining halls, or if you have any dietary restrictions it is hard to find creative and unique meals... That is where Dining AI helps! Dining AI uses the power of AI to generate unique meal options based on any dining restrictions and the current menu in the dining halls! No more wandering around the dining halls looking for something good to eat, make it yourself with the help of Dining AI. 
 
