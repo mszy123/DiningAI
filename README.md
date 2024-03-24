@@ -41,6 +41,7 @@ This extension is readily scalable due to the scalable Heroku flask server the C
 
 ### Images
 ![Screenshot](https://github.com/mszy123/DiningAI/blob/main/Screenshot%202024-03-24%20094657.png)
+![Screenshot](https://github.com/mszy123/DiningAI/blob/main/Screenshot%202024-03-24%20095234.png)
 
 
 
