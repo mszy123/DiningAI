@@ -1,9 +1,7 @@
 # DiningAI Chrome Extension
-## Created by Matthew Szypula & Kerry Cassidy
+## Created by Matthew Szypula
 
 **Introduction:** Hi! I'm Matthew Szypula and I'm a sophmore at Colgate majoring in Computer Science and Mathematical Economics. 
-
-I'm Kerry Cassidy and major in Economics but am really interested in CS. I did some UI design for this extension
 
 ### Link to Pitch & Demo Video: https://youtu.be/TxKR5SOE8AA
 
